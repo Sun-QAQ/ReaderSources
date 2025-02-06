@@ -1,0 +1,48 @@
+{
+    "bookSourceComment": "//SunQAQ-241103",
+    "bookSourceGroup": "?图片,?涩涩,?其一",
+    "bookSourceName": "?▲P站pixiv-插画",
+    "bookSourceType": 2,
+    "bookSourceUrl": "https://www.pixiv.net#插画",
+    "customOrder": -3,
+    "enabled": true,
+    "enabledCookieJar": true,
+    "enabledExplore": true,
+    "exploreUrl": "[{\"title\":\"?综合排行?\",\"url\":\"\",\"style\":{\"layout_flexBasisPercent\":1,\"layout_flexGrow\":1}},\r\n{\"title\":\"?一般?\",\"url\":\"\",\"style\":{\"layout_flexBasisPercent\":1,\"layout_flexGrow\":1}},\r\n{\"title\":\"今日\",\"url\":\"/ranking.php?mode=daily&p={{page}}&format=json\",\"style\":{\"layout_flexBasisPercent\":0.25,\"layout_flexGrow\":1}},\r\n{\"title\":\"本周\",\"url\":\"/ranking.php?mode=weekly&p={{page}}&format=json\",\"style\":{\"layout_flexBasisPercent\":0.25,\"layout_flexGrow\":1}},\r\n{\"title\":\"本月\",\"url\":\"/ranking.php?mode=monthly&p={{page}}&format=json\",\"style\":{\"layout_flexBasisPercent\":0.25,\"layout_flexGrow\":1}},\r\n{\"title\":\"新人\",\"url\":\"/ranking.php?mode=rookie&p={{page}}&format=json\",\"style\":{\"layout_flexBasisPercent\":0.25,\"layout_flexGrow\":1}},\r\n{\"title\":\"原创\",\"url\":\"/ranking.php?mode=original&p={{page}}&format=json\",\"style\":{\"layout_flexBasisPercent\":0.25,\"layout_flexGrow\":1}},\r\n{\"title\":\"AI生成\",\"url\":\"/ranking.php?mode=daily_ai&p={{page}}&format=json\",\"style\":{\"layout_flexBasisPercent\":0.25,\"layout_flexGrow\":1}},\r\n{\"title\":\"受男性欢迎\",\"url\":\"/ranking.php?mode=male&p={{page}}&format=json\",\"style\":{\"layout_flexBasisPercent\":0.25,\"layout_flexGrow\":1}},\r\n{\"title\":\"受女性欢迎\",\"url\":\"/ranking.php?mode=female&p={{page}}&format=json\",\"style\":{\"layout_flexBasisPercent\":0.25,\"layout_flexGrow\":1}},\r\n{\"title\":\"?R18?\",\"url\":\"\",\"style\":{\"layout_flexBasisPercent\":1,\"layout_flexGrow\":1}},\r\n{\"title\":\"今日\",\"url\":\"/ranking.php?mode=daily_r18&p={{page}}&format=json\",\"style\":{\"layout_flexBasisPercent\":0.25,\"layout_flexGrow\":1}},\r\n{\"title\":\"本周\",\"url\":\"/ranking.php?mode=weekly_r18&p={{page}}&format=json\",\"style\":{\"layout_flexBasisPercent\":0.25,\"layout_flexGrow\":1}},\r\n{\"title\":\"AI生成\",\"url\":\"/ranking.php?mode=daily_r18_ai&p={{page}}&format=json\",\"style\":{\"layout_flexBasisPercent\":0.25,\"layout_flexGrow\":1}},\r\n{\"title\":\"受男性欢迎\",\"url\":\"/ranking.php?mode=male_r18&p={{page}}&format=json\",\"style\":{\"layout_flexBasisPercent\":0.25,\"layout_flexGrow\":1}},\r\n{\"title\":\"受女性欢迎\",\"url\":\"/ranking.php?mode=female_r18&p={{page}}&format=json\",\"style\":{\"layout_flexBasisPercent\":0.25,\"layout_flexGrow\":1}},\r\n{\"title\":\"?插画排行?\",\"url\":\"\",\"style\":{\"layout_flexBasisPercent\":1,\"layout_flexGrow\":1}},\r\n{\"title\":\"?一般?\",\"url\":\"\",\"style\":{\"layout_flexBasisPercent\":1,\"layout_flexGrow\":1}},\r\n{\"title\":\"今日\",\"url\":\"/ranking.php?mode=daily&content=illust&p={{page}}&format=json\",\"style\":{\"layout_flexBasisPercent\":0.25,\"layout_flexGrow\":1}},\r\n{\"title\":\"本周\",\"url\":\"/ranking.php?mode=weekly&content=illust&p={{page}}&format=json\",\"style\":{\"layout_flexBasisPercent\":0.25,\"layout_flexGrow\":1}},\r\n{\"title\":\"本月\",\"url\":\"/ranking.php?mode=monthly&content=illust&p={{page}}&format=json\",\"style\":{\"layout_flexBasisPercent\":0.25,\"layout_flexGrow\":1}},\r\n{\"title\":\"新人\",\"url\":\"/ranking.php?mode=rookie&content=illust&p={{page}}&format=json\",\"style\":{\"layout_flexBasisPercent\":0.25,\"layout_flexGrow\":1}},\r\n{\"title\":\"?R18?\",\"url\":\"\",\"style\":{\"layout_flexBasisPercent\":1,\"layout_flexGrow\":1}},\r\n{\"title\":\"今日\",\"url\":\"/ranking.php?mode=daily_r18&content=illust&p={{page}}&format=json\",\"style\":{\"layout_flexBasisPercent\":0.25,\"layout_flexGrow\":1}},\r\n{\"title\":\"本周\",\"url\":\"/ranking.php?mode=weekly_r18&content=illust&p={{page}}&format=json\",\"style\":{\"layout_flexBasisPercent\":0.25,\"layout_flexGrow\":1}},\r\n{\"title\":\"受男性欢迎\",\"url\":\"/ranking.php?mode=male_r18&content=illust&p={{page}}&format=json\",\"style\":{\"layout_flexBasisPercent\":0.25,\"layout_flexGrow\":1}},\r\n{\"title\":\"受女性欢迎\",\"url\":\"/ranking.php?mode=female_r18&content=illust&p={{page}}&format=json\",\"style\":{\"layout_flexBasisPercent\":0.25,\"layout_flexGrow\":1}},\r\n{\"title\":\"?动图排行?\",\"url\":\"\",\"style\":{\"layout_flexBasisPercent\":1,\"layout_flexGrow\":1}},\r\n{\"title\":\"?一般?\",\"url\":\"\",\"style\":{\"layout_flexBasisPercent\":1,\"layout_flexGrow\":1}},\r\n{\"title\":\"今日\",\"url\":\"/ranking.php?mode=daily&content=ugoira&p={{page}}&format=json\",\"style\":{\"layout_flexBasisPercent\":0.25,\"layout_flexGrow\":1}},\r\n{\"title\":\"本周\",\"url\":\"/ranking.php?mode=weekly&content=ugoira&p={{page}}&format=json\",\"style\":{\"layout_flexBasisPercent\":0.25,\"layout_flexGrow\":1}},\r\n{\"title\":\"?R18?\",\"url\":\"\",\"style\":{\"layout_flexBasisPercent\":1,\"layout_flexGrow\":1}},\r\n{\"title\":\"今日\",\"url\":\"/ranking.php?mode=daily_r18&content=ugoira&p={{page}}&format=json\",\"style\":{\"layout_flexBasisPercent\":0.25,\"layout_flexGrow\":1}},\r\n{\"title\":\"本周\",\"url\":\"/ranking.php?mode=weekly_r18&content=ugoira&p={{page}}&format=json\",\"style\":{\"layout_flexBasisPercent\":0.25,\"layout_flexGrow\":1}},\r\n{\"title\":\"?漫画排行?\",\"url\":\"\",\"style\":{\"layout_flexBasisPercent\":1,\"layout_flexGrow\":1}},\r\n{\"title\":\"?一般?\",\"url\":\"\",\"style\":{\"layout_flexBasisPercent\":1,\"layout_flexGrow\":1}},\r\n{\"title\":\"今日\",\"url\":\"/ranking.php?mode=daily&content=manga&p={{page}}&format=json\",\"style\":{\"layout_flexBasisPercent\":0.25,\"layout_flexGrow\":1}},\r\n{\"title\":\"本周\",\"url\":\"/ranking.php?mode=weekly&content=manga&p={{page}}&format=json\",\"style\":{\"layout_flexBasisPercent\":0.25,\"layout_flexGrow\":1}},\r\n{\"title\":\"本月\",\"url\":\"/ranking.php?mode=monthly&content=manga&p={{page}}&format=json\",\"style\":{\"layout_flexBasisPercent\":0.25,\"layout_flexGrow\":1}},\r\n{\"title\":\"新人\",\"url\":\"/ranking.php?mode=rookie&content=manga&p={{page}}&format=json\",\"style\":{\"layout_flexBasisPercent\":0.25,\"layout_flexGrow\":1}},\r\n{\"title\":\"?R18?\",\"url\":\"\",\"style\":{\"layout_flexBasisPercent\":1,\"layout_flexGrow\":1}},\r\n{\"title\":\"今日\",\"url\":\"/ranking.php?mode=daily_r18&content=manga&p={{page}}&format=json\",\"style\":{\"layout_flexBasisPercent\":0.25,\"layout_flexGrow\":1}},\r\n{\"title\":\"本周\",\"url\":\"/ranking.php?mode=weekly_r18&content=manga&p={{page}}&format=json\",\"style\":{\"layout_flexBasisPercent\":0.25,\"layout_flexGrow\":1}},\r\n{\"title\":\"受男性欢迎\",\"url\":\"/ranking.php?mode=male_r18&content=manga&p={{page}}&format=json\",\"style\":{\"layout_flexBasisPercent\":0.25,\"layout_flexGrow\":1}},\r\n{\"title\":\"受女性欢迎\",\"url\":\"/ranking.php?mode=female_r18&content=manga&p={{page}}&format=json\",\"style\":{\"layout_flexBasisPercent\":0.25,\"layout_flexGrow\":1}}]",
+    "header": "{\"User-Agent\":\"Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/130.0.0.0 Safari/537.36 Edg/130.0.0.0\"}",
+    "lastUpdateTime": 1737624462285,
+    "loginUrl": "https://accounts.pixiv.net/login?return_to=https%3A%2F%2Fwww.pixiv.net%2F&lang=zh&source=pc&view_type=page",
+    "respondTime": 180000,
+    "ruleBookInfo": {},
+    "ruleContent": {
+        "content": "$.body.[*].urls.original##(http(.+)(?:jpg|gif|png|webp))##<img src=\\\"$1,{\"headers\":{\"Referer\":\"https://www.pixiv.net/\"}}\\\">",
+        "imageStyle": "single"
+    },
+    "ruleExplore": {
+        "author": "user_name",
+        "bookList": "contents.[*]",
+        "bookUrl": "illust_id\n<js>\n\"https://www.pixiv.net/ajax/illust/\" + result + \"/pages?lang=zh&version=6a863cb902e17d32584db375fea1b6bc79d6bbde\"\n</js>",
+        "coverUrl": "url##$##,{\"headers\":{\"Referer\":\"https://www.pixiv.net/\"}}",
+        "kind": "tags.[*]",
+        "lastChapter": "date",
+        "name": "title",
+        "wordCount": "illust_page_count"
+    },
+    "ruleSearch": {
+        "author": "$.userName",
+        "bookList": "$..data.[*]",
+        "bookUrl": "$.id\n<js>\n\"https://www.pixiv.net/ajax/illust/\" + result + \"/pages?lang=zh&version=6a863cb902e17d32584db375fea1b6bc79d6bbde\"\n</js>",
+        "checkKeyWord": "神里綾華",
+        "coverUrl": "$.url##$##,{\"headers\":{\"Referer\":\"https://www.pixiv.net/\"}}",
+        "kind": "$.tags.[*]",
+        "lastChapter": "$.updateDatev",
+        "name": "$.title",
+        "wordCount": ""
+    },
+    "ruleToc": {
+        "chapterList": "[*]",
+        "chapterName": "{{book.name}}"
+    },
+    "searchUrl": "/ajax/search/artworks/{{key}}?word={{key}}&order=date_d&mode=all&p={{page}}&csw=0&s_mode=s_tag&type=all&lang=zh&version=6a863cb902e17d32584db375fea1b6bc79d6bbde",
+    "weight": 0
+}

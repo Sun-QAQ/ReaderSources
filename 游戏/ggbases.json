@@ -1,0 +1,51 @@
+{
+    "bookSourceComment": "//by SunQAQ\n//登录才能显示封面\n//下载需要去浏览器下载，只提供图片预览功能。\r\n/*访问过快宕机，出错了会重试加载。\r\n以下代码勿动！可在js中通过eval(String(source.bookSourceComment))\r\n调用*/\r\nvar error = /404 Not Found/;\r\nvar maxRetries = 30; // 设置最大重试次数  \r\nvar retryCount = 0; // 初始化重试次数  \r\nwhile (error.test(result) && retryCount < maxRetries) {\r\n    java.log(\"网站出错，重新加载\");\r\n    //cookie.removeCookie(baseUrl);\r\n    result = java.ajax(baseUrl);\r\n    retryCount++; // 每次循环后增加重试次数计数器  \r\n}\r\nif (retryCount === maxRetries) {\r\n    java.log(\"重试次数已达到上限，放弃重试\");\r\n} else {\r\n    result; // 如果循环结束且未达到上限，则返回结果  \r\n}",
+    "bookSourceGroup": "?游戏,?其一,?涩涩",
+    "bookSourceName": "▲GGBsaes游戏ggbase",
+    "bookSourceType": 2,
+    "bookSourceUrl": "https://ggbases.dlgal.com",
+    "customOrder": 8,
+    "enabled": true,
+    "enabledCookieJar": true,
+    "enabledExplore": true,
+    "exploreUrl": "[{\"title\":\"最新\",\"url\":\"/search.so?p=\",\"style\":{\"layout_flexBasisPercent\":1,\"layout_flexGrow\":1}},\r\n{\"title\":\"RPG\",\"url\":\"/search.so?qq=t&p=0&title=RPG\",\"style\":{\"layout_flexBasisPercent\":0.25,\"layout_flexGrow\":1}},\r\n{\"title\":\"chinese\",\"url\":\"/search.so?qq=t&p=0&title=chinese\",\"style\":{\"layout_flexBasisPercent\":0.25,\"layout_flexGrow\":1}},\r\n{\"title\":\"slg\",\"url\":\"/search.so?qq=t&p=0&title=slg\",\"style\":{\"layout_flexBasisPercent\":0.25,\"layout_flexGrow\":1}},\r\n{\"title\":\"act\",\"url\":\"/search.so?qq=t&p=0&title=act\",\"style\":{\"layout_flexBasisPercent\":0.25,\"layout_flexGrow\":1}},\r\n{\"title\":\"3d\",\"url\":\"/search.so?qq=t&p=0&title=3d\",\"style\":{\"layout_flexBasisPercent\":0.25,\"layout_flexGrow\":1}},\r\n{\"title\":\"girlcelly\",\"url\":\"/search.so?qq=t&p=0&title=girlcelly\",\"style\":{\"layout_flexBasisPercent\":0.25,\"layout_flexGrow\":1}},\r\n{\"title\":\"English\",\"url\":\"/search.so?qq=t&p=0&title=English\",\"style\":{\"layout_flexBasisPercent\":0.25,\"layout_flexGrow\":1}},\r\n{\"title\":\"中文\",\"url\":\"/search.so?qq=t&p=0&title=%E4%B8%AD%E6%96%87\",\"style\":{\"layout_flexBasisPercent\":0.25,\"layout_flexGrow\":1}},\r\n{\"title\":\"ntr\",\"url\":\"/search.so?qq=t&p=0&title=ntr\",\"style\":{\"layout_flexBasisPercent\":0.25,\"layout_flexGrow\":1}},\r\n{\"title\":\"bishop\",\"url\":\"/search.so?qq=t&p=0&title=bishop\",\"style\":{\"layout_flexBasisPercent\":0.25,\"layout_flexGrow\":1}}]",
+    "lastUpdateTime": 1719286465981,
+    "loginUi": "[\n    {\n        \"name\": \"账号：\",\n        \"type\": \"text\"\n    },\n    {\n        \"name\": \"密码：\",\n        \"type\": \"password\"\n    },\n    {\n        \"name\": \"登录\",\n        \"type\": \"button\",\n        \"action\": \"Login()\",\n        \"style\": {\n            \"layout_flexGrow\": 1,\n            \"layout_flexBasisPercent\": 1\n        }\n    }\n]",
+    "loginUrl": "<js>\nfunction Login() {\r\n    Account = result['账号：'] ? result['账号：'] : source.getLoginInfoMap()[\"账号：\"];\r\n    Password = result['密码：'] ? result['密码：'] : source.getLoginInfoMap()[\"密码：\"];\r\n    Password = java.md5Encode(Password);\r\n    if (Account == '' && Password == '') {\r\n        login('【登录提示】' + '\\n\\n请输入账号和密码');\r\n    } else if (Account == '') {\r\n        login('【登录提示】' + '\\n\\n请输入账号');\r\n    } else if (Password == '') {\r\n        login('【登录提示】' + '\\n\\n请输入密码');\r\n    } else {\r\n        var pathname = source.bookSourceUrl + '/login.so';\r\n        var method = \"POST\";\r\n        //请求体：loginType=1&username=sunqaq&password=adca6ac23439695d1f317844c26ea535\r\n        var requestBody = 'loginType=1&username=' + Account + '&password=' + Password;\r\n        //请求头：使用源注释辅助生成\r\n        var headers = \"\\{\\\"Content-Type\\\":\\\"application/x-www-form-urlencoded; charset=UTF-8\\\"\\}\";\r\n        var option = {\r\n            \"method\": String(method),\r\n            \"body\": String(requestBody),\r\n            \"headers\": String(headers)\r\n        };\r\n        Response = java.ajax(pathname + ',' + JSON.stringify(option));\r\n        if (JSON.parse(Response).success == true) {\r\n            java.log(Response);\r\n            login('【登录提示】\\n\\n┏┅━┅━┅━┅━┅┅━┅━┅━┅━┅┓\\n┋┋' + '\\n' + Account + '\\n┋┋' + '\\n登录成功\\n┋┋' + '\\n┗┅━┅━┅━┅━┅┅━┅━┅━┅━┅┛');\r\n        } else {\r\n            java.log(Response);\r\n            login('【登录提示】' + '\\n' + Account + '\\n登录失败\\n\\n请检查账号和密码');\r\n        }\r\n    }\r\n}\r\nfunction login(e) {\r\n    if (e == undefined) {\r\n        return;\r\n    }\r\n    java.longToast(e);\r\n}\n</js>",
+    "respondTime": 360001,
+    "ruleBookInfo": {
+        "intro": "id.description@td@div@html",
+        "tocUrl": "<js>\r\nvar str = result;\r\nvar match = str.match(/\\$\\(\\\"\\#showCoverBtn\\\"\\)\\.attr\\(\\\"href\\\", \\\"\\/\\/(.*?)\\\"/);\r\nvar mlurl = 'https:\\/\\/' + match[1] + ',{\\\"webView\\\":true}';\r\nresult = mlurl;\r\n</js>"
+    },
+    "ruleContent": {
+        "content": "<js>\neval(String(source.bookSourceComment));\n</js>\nid.showpictd@img@src",
+        "imageStyle": "FULL",
+        "nextContentUrl": "<js>\nvar str = result;\nvar match1 = str.match(/window.location.href = \\\"(\\/\\/.*?)\\\"/);\nvar match3 = str.match(/\\\"disabled\\\">.*?\\/(.*?)<\\/button>/);\nvar xyyurl = [];\nvar link;\nfor (i = 1; i < match3[1]; i++) {\n    link = 'https:' + match1[1] + i + ',{\\\"webView\\\":true}';\n    xyyurl.push({ url: link });\n}\nJSON.stringify(xyyurl);\n</js>\n$.[*].url",
+        "replaceRegex": "##(\\/\\/cover(.+)(?:jpg|gif))##<img src=\\\"http:$1\\\">"
+    },
+    "ruleExplore": {
+        "bookList": "",
+        "bookUrl": "",
+        "coverUrl": "",
+        "lastChapter": "",
+        "name": "",
+        "wordCount": ""
+    },
+    "ruleSearch": {
+        "bookList": "class.dtr",
+        "bookUrl": "class.t-l.1@a@href",
+        "checkKeyWord": "中文",
+        "coverUrl": "class.t-l.1@a@c\n<js>\n// 获取当前元素的\"c\"属性值\r\n//var src = \"RJ321341\";\r\nvar src = result;\r\n//java.log(src);\r\n// 定义两个正则表达式对象，用于匹配URL前缀\r\nvar r1 = new RegExp(\"^http\"), r2 = new RegExp(\"^//\");\r\n\r\n// 当src非空、非\" \"时执行以下逻辑\r\nif (src && src != \"\" && src != \" \") {\r\n\tif (/^d[0-9]{6,8}$/.test(src)) {\r\n\t\tsrc = gendlcover(src.substr(1, src.length)); // 处理以\"d\"开头的src\r\n\t} else if (/^RJ[0-9]{6,8}$/.test(src)) {\r\n\t\tsrc = gendlcover(src.substr(2, src.length)); // 处理以\"RJ\"开头的src\r\n\t} else if (/^v[0-9]{6,8}$/.test(src)) {\r\n\t\tsrc = gendlcover(src.substr(1, src.length), 1); // 处理以\"v\"开头的src，带参数1\r\n\t} else if (/^VJ[0-9]{6,8}$/.test(src)) {\r\n\t\tsrc = gendlcover(src.substr(2, src.length), 1); // 处理以\"VJ\"开头的src，带参数1\r\n\t} else if (/^g[0-9]{6,7}$/.test(src)) {\r\n\t\tsrc = gengccover(src.substr(1, src.length)); // 处理以\"g\"开头的src\r\n\t} else if (/^gc[0-9]{6,7}$/.test(src)) {\r\n\t\tsrc = gengccover(src.substr(2, src.length)); // 处理以\"gc\"开头的src\r\n\t} else if (!r1.test(src) && !r2.test(src)) {\r\n\t\tsrc = coverurl(src); // 处理不符合前缀规则的src\r\n\t}\r\n}\r\n//java.log(src);\r\n\r\nfunction gendlcover(did, type) {\r\n\tvar pre0 = null, dpre0 = null, npre = null;\r\n\tif (did.indexOf('0') == 0 && did.length == 8) npre = '0';\r\n\tdid = parseInt(did);\r\n\tvar rid = Math.ceil(did / 1000) * 1000;\r\n\tif (did < 10) { pre0 = \"00000\"; } else if (did < 100) { pre0 = \"0000\"; } else if (did < 1000) { pre0 = \"000\"; } else if (did < 10000) { pre0 = \"00\"; } else if (did < 100000) { pre0 = \"0\"; }\r\n\tif (rid < 10000) { dpre0 = \"00\"; } else if (rid < 100000) { dpre0 = \"0\"; }\r\n\tif (pre0) { did = pre0 + did; } if (dpre0) { rid = dpre0 + rid; } if (npre) { did = npre + did; rid = npre + rid; }\r\n\tvar usecoverproxy = false;\r\n\tif (typeof Storage !== \"undefined\") {\r\n\t\tusecoverproxy = localStorage.getItem(\"usecoverproxy\" + dayjs().format(\"YYYY-MM-DD\"));\r\n\t}\r\n\treturn (usecoverproxy ? \"//cover.ydgal.com/_200_cover/\".replace(\"/_200_cover/\", \"\") : \"//img.dlsite.jp\") + \"/resize/images2/work/\" + (!type ? \"doujin/RJ\" : \"professional/VJ\") + rid + \"/\" + (!type ? \"RJ\" : \"VJ\") + did + \"_img_main_240x240.jpg\";\r\n}\r\n\r\nfunction gengccover(did) {\r\n\treturn \"//cover.ydgal.com/_200_cover/\".replace(\"/_200_cover/\", \"/_300_cover/\") + \"/getchu/gc\" + did + \".jpg\";\r\n\t//return \"//cover.ydgal.com/_200_cover/\".replace(\"/_200_cover/\", \"\") + \"/brandnew/\" + did + \"/c\" + did + \"package_s.jpg\";\r\n}\r\n\r\nfunction coverurl(tid) {\r\n\t// 将tid按\"_\"分割，取第一部分作为数字串num\r\n\tvar num = tid.split(\"_\")[0];\r\n\t// 定义封面图片的基础URL\r\n\tvar coverUrl = \"//cover.ydgal.com/_200_cover/\";\r\n\t// 判断num是否表示的数字大于1360000\r\n\tif (parseInt(num) > 1360000) {\r\n\t\t// 对于新图片，返回带有\"new/\"路径前缀的URL\r\n\t\treturn coverUrl + \"new/\" + tid;\r\n\t} else {\r\n\t\t// 对于旧图片，返回带有\"old/\"路径前缀的URL\r\n\t\treturn coverUrl + \"old/\" + tid;\r\n\t}\r\n}\r\nsrc;\n</js>",
+        "lastChapter": "class.d@text",
+        "name": "class.t-l.1@text",
+        "wordCount": "class.t-l.-1@text"
+    },
+    "ruleToc": {
+        "chapterList": "title",
+        "chapterName": "{{book.name}}",
+        "chapterUrl": "",
+        "preUpdateJs": ""
+    },
+    "searchUrl": "/search.so?p={{page-1}}&title={{key}}",
+    "weight": 0
+}

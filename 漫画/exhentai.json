@@ -1,0 +1,41 @@
+{
+    "bookSourceComment": "//里站，访问无限制，需要cookie登录; ",
+    "bookSourceGroup": "?漫画,?涩涩,?其一",
+    "bookSourceName": "?▲EH漫画里站exhentai",
+    "bookSourceType": 2,
+    "bookSourceUrl": "https://exhentai.org",
+    "customOrder": 2,
+    "enabled": true,
+    "enabledCookieJar": true,
+    "enabledExplore": true,
+    "exploreUrl": "[{\"title\":\"最新\",\"url\":\"/\",\"style\":{\"layout_flexBasisPercent\":0.25,\"layout_flexGrow\":1}},\r\n{\"title\":\"热门\",\"url\":\"/popular\",\"style\":{\"layout_flexBasisPercent\":0.25,\"layout_flexGrow\":1}},\r\n{\"title\":\"同人志\",\"url\":\"/doujinshi\",\"style\":{\"layout_flexBasisPercent\":0.25,\"layout_flexGrow\":1}},\r\n{\"title\":\"漫画\",\"url\":\"/Manga\",\"style\":{\"layout_flexBasisPercent\":0.25,\"layout_flexGrow\":1}},\r\n{\"title\":\"画师CG\",\"url\":\"/artistcg\",\"style\":{\"layout_flexBasisPercent\":0.25,\"layout_flexGrow\":1}},\r\n{\"title\":\"游戏CG\",\"url\":\"/gamecg\",\"style\":{\"layout_flexBasisPercent\":0.25,\"layout_flexGrow\":1}},\r\n{\"title\":\"西方\",\"url\":\"/western\",\"style\":{\"layout_flexBasisPercent\":0.25,\"layout_flexGrow\":1}},\r\n{\"title\":\"无H\",\"url\":\"/non-h\",\"style\":{\"layout_flexBasisPercent\":0.25,\"layout_flexGrow\":1}},\r\n{\"title\":\"图集\",\"url\":\"/imageset\",\"style\":{\"layout_flexBasisPercent\":0.25,\"layout_flexGrow\":1}},\r\n{\"title\":\"Cosplay\",\"url\":\"/cosplay\",\"style\":{\"layout_flexBasisPercent\":0.25,\"layout_flexGrow\":1}},\r\n{\"title\":\"亚洲\",\"url\":\"/asianporn\",\"style\":{\"layout_flexBasisPercent\":0.25,\"layout_flexGrow\":1}},\r\n{\"title\":\"杂项\",\"url\":\"/misc\",\"style\":{\"layout_flexBasisPercent\":0.25,\"layout_flexGrow\":1}}]",
+    "header": "<js>\nheaders={\n    \"Accept\": \"text/html,application/xhtml+xml,application/xml;q=0.9,image/webp,image/apng,*/*;q=0.8,application/signed-exchange;v=b3;q=0.7\",\n    \"Sec-Ch-Ua-Platform\": \"Windows\",\n    \"Referer\": \"https://exhentai.org/\",\n    \"Host\":\"exhentai.org\",\n    \"Cookie\": cache.get(\"ehcookie\") || ''\n}\ncache.put(\"ehheaders\",JSON.stringify(headers));\nJSON.stringify(headers);\n</js>",
+    "lastUpdateTime": 1738811600906,
+    "loginUi": "[{\"name\":\"igneous：\",\"type\":\"text\"},\r\n{\"name\":\"ipb_member_id：\",\"type\":\"text\"},\r\n{\"name\":\"ipb_pass_hash：\",\"type\":\"text\"},\r\n{\"name\":\"保存cookie\",\"type\":\"button\",\"action\":\"SaveCookie()\",\"style\":{\"layout_flexGrow\":1,\"layout_flexBasisPercent\":1}}]",
+    "loginUrl": "function SaveCookie() {\n    Igneous = result['igneous：'] ? result['igneous：'] : source.getLoginInfoMap()[\"igneous：\"];\n    Ipb_member_id = result['ipb_member_id：'] ? result['ipb_member_id：'] : source.getLoginInfoMap()[\"ipb_member_id：\"];\n    Ipb_pass_hash = result['ipb_pass_hash：'] ? result['ipb_pass_hash：'] : source.getLoginInfoMap()[\"ipb_pass_hash：\"];\n\n    if (Igneous && Ipb_member_id && Ipb_pass_hash) {\n        cookie = 'igneous=' + Igneous + ';ipb_member_id=' + Ipb_member_id + ';ipb_pass_hash=' + Ipb_pass_hash;\n        cache.put(\"ehcookie\", cookie);\n        java.longToast('已保存Cookie信息');\n    } else {\n        java.longToast('Cookie信息不完整');\n    }\n}\nfunction login(e) {\n    if (e == undefined) {\n        return;\n    }\n    java.longToast(e);\n}",
+    "respondTime": 181589,
+    "ruleBookInfo": {
+        "tocUrl": "id.gdt@class.gdtm.0@a@href"
+    },
+    "ruleContent": {
+        "content": "id.img@src",
+        "imageStyle": "single",
+        "nextContentUrl": "class.sn.0@id.next@href",
+        "replaceRegex": "##(https\\:(.+)(?:jpg|gif|png|webp))##<img src=\\\"$1\\\">"
+    },
+    "ruleExplore": {},
+    "ruleSearch": {
+        "bookList": "class.itg gltc@tag.tr.!0||class.gl1t",
+        "bookUrl": "class.gl3c glname@a@href||class.gl1t@a@href",
+        "coverUrl": "class.glthumb@img@data-src||class.glthumb@img@src||class.gl3t@a@img@src##$##, {\"headers\":{\"Referer\":\"https://exhentai.org/\",\"Host\":\"s.exhentai.org\",\"cookie\":\"{{cache.get(\"ehcookie\")}}\"}}",
+        "kind": "class.gt@text",
+        "name": "class.glink@text||class.gl4t glname glink@a@text"
+    },
+    "ruleToc": {
+        "chapterList": "id.gdt@a.0",
+        "chapterName": "{{book.name}}",
+        "chapterUrl": "href"
+    },
+    "searchUrl": "/?f_search={{key}}, {\"headers\":{{cache.get(\"ehheaders\")}}}",
+    "weight": 0
+}
